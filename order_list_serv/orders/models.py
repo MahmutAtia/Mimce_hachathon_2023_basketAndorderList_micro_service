@@ -18,9 +18,6 @@ class Product(models.Model):
     product_description = models.CharField(max_length=200)
     quantity = models.IntegerField(default=0)
     order = models.ForeignKey(Order, on_delete=models.CASCADE, related_name='products' , default=1)
-
-
-
     def __str__(self):
         return self.product_name
 
