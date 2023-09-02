@@ -8,7 +8,7 @@ class Order(models.Model):
     order_date = models.DateTimeField('date ordered' , auto_now_add=True)
 
     def __str__(self):
-        return self.order_date.strftime('%Y-%m-%d %H:%M:%S')
+        return self.order_id
     
 class Product(models.Model):
     id = models.AutoField(primary_key=True)
